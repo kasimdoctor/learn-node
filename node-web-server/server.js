@@ -49,6 +49,12 @@ app.get('/about', (request, response) => {
     });
 });
 
+app.get('/projects', (request, response) => {
+    response.render('projects.hbs', {
+        pageTitle: 'My Portfolio'
+    })
+});
+
 app.get('/bad', (request, response) => {
     response.send({
         error: 'Error handling request'
